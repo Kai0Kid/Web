@@ -33,7 +33,7 @@ const YukinaConfig: Configuration = {
 
   username: "Kai0Kid",
   sign: "Tìm gì ở tôi.",
-  avatarUrl: "./../pictures/logokid.jpg",
+  avatarUrl: "/pictures/logokid.jpg",
   socialLinks: [
     {
       icon: "line-md:github-loop",
