@@ -49,7 +49,7 @@ const YukinaConfig: Configuration = {
     },
     {
       icon: "mingcute:tiktok-line",
-      link: "https://www.tiktok.com/@k4i0k1dk",
+      link: "https://www.tiktok.com/@k4i0k1d",
     },
   ],
   maxSidebarCategoryChip: 6, // It is recommended to set it to a common multiple of 2 and 3
