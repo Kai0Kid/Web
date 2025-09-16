@@ -2,7 +2,7 @@ import I18nKeys from "./src/locales/keys";
 import type { Configuration } from "./src/types/config";
 
 const YukinaConfig: Configuration = {
-  title: "Whoami",
+  title: "Whoami?",
   subTitle: "My Security Notes",
   brandTitle: "Kai0Kid",
 
@@ -32,7 +32,7 @@ const YukinaConfig: Configuration = {
   ],
 
   username: "Kai0Kid",
-  sign: "Tìm gì ở tôi.",
+  sign: "Bạn tìm gì ở tôi ?",
   avatarUrl: "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/logokid.jpg",
   socialLinks: [
     {
