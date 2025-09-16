@@ -32,7 +32,7 @@ const YukinaConfig: Configuration = {
   ],
 
   username: "Kai0Kid",
-  sign: "Ad Astra Per Aspera.",
+  sign: "Tìm gì ở tôi.",
   avatarUrl: "https://s2.loli.net/2025/01/25/FPpTrQSezM8ivbl.webp",
   socialLinks: [
     {
