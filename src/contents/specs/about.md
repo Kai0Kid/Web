@@ -1,5 +1,5 @@
-# Special thanks to:
+# Đôi chút về tôi:
 
-- [Hexo Shoka theme](https://github.com/amehime/hexo-theme-shoka) for providing design inspiration
-
-- [Astro Fuwari template](https://github.com/saicaca/fuwari) for providing the main design concept and part of the implementation
+- Tôi có nickname là kai0kid , lấy ý tưởng từ nhân vật hoạt hình nhật bản KaitoKid .
+- Tôi học ngành an toàn thông tin tại học viện kỹ thuật mật mã KMA .
+## Trang web vẫn đang được phát triển , đang đợi cập nhật tiếp ...
