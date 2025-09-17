@@ -58,12 +58,11 @@ const YukinaConfig: Configuration = {
   maxFooterTagChip: 24,
 
   banners: [
-    "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/0.jpg",
-    "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/1.jpg",
-    "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/2.jpg",
+    "https://images6.alphacoders.com/992/992324.png",
+    "https://images5.alphacoders.com/133/1338843.png",
     "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/3.jpg",
-    "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/4.jpg",
     "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/5.jpg",
+    "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/1.jpg",
     "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/6.jpg",
   ],
 
