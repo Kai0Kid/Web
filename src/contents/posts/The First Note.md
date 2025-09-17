@@ -19,7 +19,7 @@ Mình sẽ chia sẻ các ghi chú về **An toàn thông tin**, các thử nghi
 
 ## Test chèn video vào bài viết
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/oAK33yxVaQs" title="CapCut GenZ | P317 - Tổng Hợp Những Mẫu CapCut Gái Xinh Bổ Mắt Và Hot Dance Trên TikTok" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/yVj92IY4HRQ?list=RDyVj92IY4HRQ" title="[Mashup][AMV] Love Story - Cổ Tích Anh Và Em" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
