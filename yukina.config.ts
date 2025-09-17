@@ -60,7 +60,7 @@ const YukinaConfig: Configuration = {
   banners: [
     "https://images6.alphacoders.com/992/992324.png",
     "https://images5.alphacoders.com/133/1338843.png",
-    "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/3.jpg",
+    "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/a3.jpg",
     "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/5.jpg",
     "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/1.jpg",
     "https://raw.githubusercontent.com/Kai0Kid/Web/refs/heads/main/pictures/6.jpg",
