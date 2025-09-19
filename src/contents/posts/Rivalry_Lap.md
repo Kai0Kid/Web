@@ -143,7 +143,9 @@ VortexaTech,55000,Market Expansion,No,Local Market,8
 NovaSphere Tech,65000,Product Launch,Yes,Innovators,9
 ```
 ==> đáp án cho câu hỏi này là : **Young Adults**
+
 ---
+
 ## What is the name of the secret marketing tool developed by Create Edge?
 
 - Tiếp tục đọc nội dung của file /archive/meetings/orbitronix_system-2023-11-20.txt thấy được đoạn nội dung này :
