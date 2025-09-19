@@ -4,6 +4,7 @@ published: 2025-09-16
 description: "Bài viết đầu tiên tôi tự viết trên web mới của tôi."
 tags: [Blog]
 category: Examples
+licenseName: "Unlicensed"
 draft: false
 ---
 

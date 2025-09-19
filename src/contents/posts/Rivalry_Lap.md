@@ -4,6 +4,7 @@ published: 2025-09-19
 description: "Bài này khá là hay."
 tags: [CAPT, Hackviser]
 category: Write up
+licenseName: "Unlicensed"
 draft: false
 ---
 
