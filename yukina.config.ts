@@ -10,7 +10,7 @@ const YukinaConfig: Configuration = {
 
   site: "https://kai0kid.vercel.app",
 
-  locale: "en", // set for website language and date format
+  locale: "vi", // set for website language and date format
 
   navigators: [
     {
