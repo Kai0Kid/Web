@@ -19,8 +19,12 @@ Mình sẽ chia sẻ các ghi chú về **An toàn thông tin**, các thử nghi
 
 ## Test chèn video vào bài viết
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/yVj92IY4HRQ?list=RDyVj92IY4HRQ" title="[Mashup][AMV] Love Story - Cổ Tích Anh Và Em" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/yVj92IY4HRQ?list=RDyVj92IY4HRQ" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 
 ## Mục tiêu ✨
