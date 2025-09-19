@@ -17,7 +17,7 @@ draft: false
 ## What is the advertising budget of Orbitronix Systems in dollars?
 - Thử dùng công cụ ffuf để quét thư mục , tôi phát hiện được 1 thư mục có tên **ftp**
 ```
- ffuf -ic-w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e '.php'-u http://createdge.hv/FUZZ/ -t 40
+ ffuf -ic -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e '.php' -u http://createdge.hv/FUZZ/ -t 40
 
      /'___\  /'___\           
    /\ \__/ /\ \__/  __  __  /\ \__/       
