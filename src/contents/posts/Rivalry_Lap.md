@@ -3,7 +3,7 @@ title: "Rivalry Lap"
 published: 2025-09-19
 description: "Bài này khá là hay."
 tags: [CAPT, Hackviser]
-category: Examples
+category: Write up
 draft: false
 ---
 
