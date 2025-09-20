@@ -83,3 +83,18 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 199.88 seconds
 ```
 ==> Đáp án là : **DESKTOP-BG4O059**
+
+---
+## What is the operating system of the target computer?
+- Tôi giao tiếp với cổng 1978 trên mục tiêu :
+```
+┌─[root@hackerbox]─[~]
+└──╼ #nc 172.20.15.149 1978
+system windows 6.2
+luminateOK
+```
+==> Đáp án là : **windows 10**
+
+---
+## What is the domain name of the website whose user information was compromised by the hacker group?
+
