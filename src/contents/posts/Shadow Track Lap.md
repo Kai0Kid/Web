@@ -217,7 +217,7 @@ C:\Users\Harry\Desktop>type telegram.txt
 type telegram.txt
 t.me/+37NnWAZY2HTaYjM9A
 ```
-==> Đáp án la : **t.me/+37NnWAZY2HTaYjM9A**
+==> Đáp án là : **t.me/+37NnWAZY2HTaYjM9A**
 
 ---
 
