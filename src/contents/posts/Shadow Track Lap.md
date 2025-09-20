@@ -97,4 +97,18 @@ luminateOK
 
 ---
 ## What is the domain name of the website whose user information was compromised by the hacker group?
-
+- Trong quá trình scan, tôi thấy port 1978 mở và phản hồi **system windows 6.2 luminateOK**, đó chính là service WiFi Mouse dễ bị khai thác bằng CVE-2022-3218
+```
+┌─[root@hackerbox]─[~]
+└──╼ #searchsploit -m 49601
+  Exploit: WiFi Mouse 1.7.8.5 - Remote Code Execution
+      URL: https://www.exploit-db.com/exploits/49601
+     Path: /usr/share/exploitdb/exploits/windows/remote/49601.py
+    Codes: N/A
+ Verified: True
+File Type: Python script, ASCII text executable
+cp: overwrite '/root/49601.py'? 
+Copied to: /root/49601.py
+┌─[root@hackerbox]─[~]
+└──╼ #chmod +x 49601.py 
+```
